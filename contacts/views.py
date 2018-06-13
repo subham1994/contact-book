@@ -9,7 +9,7 @@ from .models import Contact
 from .serializers import ContactSerializer
 
 
-def paginate(data, page, items_per_page=1):
+def paginate(data, page, items_per_page=3):
 	paginator = Paginator(data, items_per_page)
 	try:
 		data = paginator.page(page)
